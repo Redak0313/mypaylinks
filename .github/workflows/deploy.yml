@@ -89,7 +89,7 @@ jobs:
           node-version: 16
 
       - name: Install dependencies
-        run: bahmutov/npm-install@v1
+        run: npm i
 
       - name: Build
         run: npm run build
