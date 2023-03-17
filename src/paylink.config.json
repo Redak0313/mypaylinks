@@ -56,7 +56,7 @@
   "Payments": [
     {
       "id": "paypal",
-      "label": "Paypal",
+      "label": "PayPal",
       "value": "habanomity@gmail.com",
       "img": "./images/payments/paypal.svg"
     },
