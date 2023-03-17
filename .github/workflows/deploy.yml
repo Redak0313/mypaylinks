@@ -1,34 +1,59 @@
-name: Deploy to GitHub Pages
+name: Deploy
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
-  deploy:
+  build:
+    name: Build
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
 
-    - name: Install dependencies
-      run: npm install
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
 
-    - name: Build
-      run: npm run build
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        # personal_token: ${{ secrets.GITHUB_TOKEN }}
-        deploy_key: ${{ secrets.DEPLOY_KEY }}
-        publish_dir: ./build
-        cname: paylink.kadergomez.dev
-        commit_message: Deploy to GitHub Pages
-        publish_branch: gh-pages
+      - name: Build project
+        run: npm run build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: paylink.kadergomez.dev
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
