@@ -28,6 +28,7 @@ jobs:
         with:
           personal_token: ${{ secrets.GITHUB_TOKEN }}
           deploy_key: ${{ secrets.DEPLOY_KEY }}
-          publish_dir: ./dist
+          publish_dir: ./dist 
+          publish_branch: main
           cname: paylink.kadergomez.dev
           commit_message: Deployed to GitHub Pages
