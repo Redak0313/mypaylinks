@@ -8,21 +8,27 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - uses: actions/checkout@v2
 
-      - name: Install dependencies
-        run: npm install
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
 
-      - name: Build for production
-        run: npm run build
+    - name: Install dependencies
+      run: npm install
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          personal_token: ${{ secrets.ACCESS_TOKEN }}
-          deploy_key: ${{ secrets.DEPLOY_KEY }}
-          publish_dir: ./build
-          cname: paylink.kadergomez.dev
-          commit_message: Deploy to GitHub Pages
+    - name: Build
+      run: npm run build
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        # personal_token: ${{ secrets.GITHUB_TOKEN }}
+        deploy_key: ${{ secrets.DEPLOY_KEY }}
+        publish_dir: ./build
+        cname: paylink.kadergomez.dev
+        commit_message: Deploy to GitHub Pages
+        publish_branch: gh-pages
