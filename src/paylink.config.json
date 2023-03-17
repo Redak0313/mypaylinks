@@ -2,42 +2,42 @@
   "theme": "minimalist-dark-theme",
 
   "properties": {
-    "name": "Daniel Castillo",
-    "description": "Frontend web developer and tireless creator",
-    "alt": "Photo of Daniel Castillo",
-    "hero": "./images/daniel-castillo.png"
+    "name": "Kader Gómez Céspedes",
+    "description": "Full Stack Developer | React Native Developer | Civil Engineer",
+    "alt": "Photo of Kader Gómez Céspedes",
+    "hero": "./images/kader.png"
   },
 
   "Social": [
     {
       "label": "Email",
       "value": "bx-envelope",
-      "link": "mailto:dlcastillo3015@gmail.com"
+      "link": "mailto:redakdev@gmail.com"
     },
     {
       "label": "Link",
       "value": "bx-link",
-      "link": "https://dlcastillop.vercel.app"
+      "link": "https://kadergomez.dev"
     },
     {
       "label": "GitHub",
       "value": "bxl-github",
-      "link": "https://github.com/dlcastillop"
+      "link": "https://github.com/kader1303"
     },
     {
       "label": "Twitter",
       "value": "bxl-twitter",
-      "link": "https://twitter.com/dlcastillop"
+      "link": "https://twitter.com/KaderGomezDev"
     },
     {
       "label": "LinkedIn",
       "value": "bxl-linkedin",
-      "link": "https://linkedin.com/in/dlcastillop"
+      "link": "https://linkedin.com/in/kadergomezdev"
     },
     {
       "label": "Instagram",
       "value": "bxl-instagram",
-      "link": "https://instagram.com/dlcastillop"
+      "link": "https://instagram.com/kadergomezdev"
     },
     { "label": "Discord", "value": "bxl-discord", "link": "" },
     { "label": "Facebook", "value": "bxl-facebook", "link": "" },
@@ -55,9 +55,39 @@
 
   "Payments": [
     {
+      "id": "paypal",
+      "label": "Paypal",
+      "value": "habanomity@gmail.com",
+      "img": "./images/payments/paypal.svg"
+    },
+    {
+      "id": "card",
+      "label": "CUP",
+      "value": "9200 1299 7076 2791",
+      "img": "./images/payments/card.svg"
+    },
+    {
+      "id": "card",
+      "label": "MLC",
+      "value": "9225 1299 7215 1028",
+      "img": "./images/payments/card.svg"
+    },
+    {
+      "id": "usdt",
+      "label": "USDT",
+      "value": "TW9WL7vP9FXf2PCXfDpVpiyk9Cb5JyTXAn",
+      "img": "./images/payments/usdt.svg"
+    },
+    {
+      "id": "ltc",
+      "label": "Litecoin",
+      "value": "ltc1qgu0xz3zd3fy2dlmxhn8ngvrqh3r94xa2q4p4nx",
+      "img": "./images/payments/ltc.svg"
+    },
+    {
       "id": "btc",
       "label": "Bitcoin",
-      "value": "bc1qejahgjmqnmyrw7jvn0d7evfdq6ssjl3wq7hfle",
+      "value": "bc1q2rl8pc9us9j320v98nw4j3kreq9ss93eavcvpqm5zw2w33hfjwtqvnkx00",
       "img": "./images/payments/btc.svg"
     },
     {
@@ -81,31 +111,13 @@
     {
       "id": "eth",
       "label": "Ethereum",
-      "value": "0x59C864f658caD68A19a97499755080c056079988",
+      "value": "",
       "img": "./images/payments/eth.svg"
-    },
-    {
-      "id": "ltc",
-      "label": "Litecoin",
-      "value": "",
-      "img": "./images/payments/ltc.svg"
-    },
-    {
-      "id": "paypal",
-      "label": "Paypal",
-      "value": "",
-      "img": "./images/payments/paypal.svg"
-    },
-    {
-      "id": "usdt",
-      "label": "USDT",
-      "value": "",
-      "img": "./images/payments/usdt.svg"
     },
     {
       "id": "qvapay",
       "label": "QvaPay",
-      "value": "https://qvapay.com/payme/dlcastillop",
+      "value": "",
       "img": "./images/payments/qvapay.svg"
     },
     {
@@ -123,7 +135,7 @@
     {
       "id": "trx",
       "label": "Tron",
-      "value": "",
+      "value": "TW9WL7vP9FXf2PCXfDpVpiyk9Cb5JyTXAn",
       "img": "./images/payments/trx.svg"
     },
     {
@@ -131,12 +143,6 @@
       "label": "XRP",
       "value": "",
       "img": "./images/payments/xrp.svg"
-    },
-    {
-      "id": "card",
-      "label": "Card",
-      "value": "",
-      "img": "./images/payments/card.svg"
     }
   ]
 }

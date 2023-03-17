@@ -1,4 +1,4 @@
-﻿# PayLink
+﻿# PayLink 
 
 PayLink is a payment organizer and an open source alternative to [Paynest](https://paynest.app).
 
