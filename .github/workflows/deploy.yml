@@ -21,7 +21,8 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.ACCESS_TOKEN }}
+          personal_token: ${{ secrets.ACCESS_TOKEN }}
+          deploy_key: ${{ secrets.DEPLOY_KEY }}
           publish_dir: ./build
           cname: paylink.kadergomez.dev
           commit_message: Deploy to GitHub Pages
