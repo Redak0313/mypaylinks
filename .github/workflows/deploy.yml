@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages #Lets see now
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -10,25 +10,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: 16
 
       - name: Install dependencies
-        run: npm install
+        run: npm i
 
       - name: Build
         run: npm run build
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3.7.0
+        uses: peaceiris/actions-gh-pages@v3.13.2
         with:
-          personal_token: ${{ secrets.GITHUB_TOKEN }}
           deploy_key: ${{ secrets.DEPLOY_KEY }}
-          publish_dir: ./dist 
+          publish_dir: ./dist
           publish_branch: main
           cname: paylink.kadergomez.dev
           commit_message: Deployed to GitHub Pages
+          
